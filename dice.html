@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive 3D Dice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="menu-bar">
+        <ul>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Professional Experience</a></li>
+            <li><a href="interest.html">Interests</a></li>
+            <li><a href="projects.html">Projects</a></li>
+             <!-- <li><a href="testimonials.html">Testimonials</a></li> --> <!-- Remove this line -->
+        </ul>
+    </nav> 
+
+    <!-- Secondary View: 3D Dice -->
+    <div id="secondary-view" class="view">
+        <div class="dice-container">
+            <div class="dice">
+                <div class="side side1" data-url="about.html">
+                    <p>About Me</p>
+                </div>
+                <div class="side side2" data-url="education.html">
+                    <p>Education</p>
+                </div>
+                <div class="side side3" data-url="experience.html">
+                    <p>Professional Experience</p>
+                </div>
+                <div class="side side4" data-url="interest.html">
+                    <p>Interests</p>
+                </div>
+                <div class="side side5" data-url="projects.html">
+                    <p>Projects</p>
+                </div>
+                <!-- <div class="side side6" data-url="testimonials.html">
+            <p>Testimonials</p>
+        </div> --> <!-- Remove this line -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Information -->
+    <footer class="contact-info">
+        <p>Contact Information</p>
+        <p>Email: <a href="mailto:maddie.havraniak@gmail.com">maddie.havraniak@gmail.com</a></p>
+        <p>Phone: <a href="tel:+19143302678">+19143302678</a></p>
+    </footer>
+
+    <script src="secondary.js"></script>
+</body>
+</html>
