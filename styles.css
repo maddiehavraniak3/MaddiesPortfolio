@@ -778,36 +778,74 @@ body, html {
 .menu-bar {
     width: 100%;
     background-color: #2c2c2c;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 10 20px 40px rgba(0, 0, 0, 0.2);
     overflow-x: auto; /* Allow horizontal scrolling */
     white-space: nowrap; /* Prevent menu items from wrapping to a new line */
+    position: relative; /* For gradient overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu-bar ul {
     list-style-type: none;
     margin: 0;
-    padding: 20px 0;
+    padding: 60px 10;
     display: flex;
-    justify-content: center; /* Center the menu items */
-    width: 100%; /* Make the ul take full width */
-    flex-wrap: nowrap; /* Prevent wrapping of menu items */
+    justify-content: center; /* Center the menu items within the ul */
+    width: max-content; /* Ensure the width is enough to fit all items */
 }
 
 .menu-bar li {
     display: inline-block;
     margin: 0 15px;
+    position: relative; /* For underline positioning */
 }
 
 .menu-bar a {
     text-decoration: none;
     color: #f0f0f0;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     transition: color 0.3s ease;
+    padding-bottom: 60px; /* Space for the underline */
 }
 
 .menu-bar a:hover {
     color: #e40000; /* Red color on hover */
+}
+
+.menu-bar a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #e40000; /* Red underline */
+    transition: width 0.3s;
+}
+
+.menu-bar a:hover::after {
+    width: 100%;
+}
+
+/* Gradient Overlay to indicate more content */
+.menu-bar::before, .menu-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    pointer-events: none;
+}
+
+.menu-bar::before {
+    left: 0;
+    background: linear-gradient(to right, #1f1f1f, transparent);
+}
+
+.menu-bar::after {
+    right: 0;
+    background: linear-gradient(to left, #1f1f1f, transparent);
 }
 
 
